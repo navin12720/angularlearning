@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<app-post [fromparent]="msg" (msgevent)="recmsg($event)"></app-post>
+<!-- string interpolation -->
+<h3>{{msgfromchild}}</h3>
+<h3>{{recmsgdata}}</h3>
+<!-- porperty binding -->
+<img [src]="imgurl" alt="">
+<!-- class binding -->
+<h1 [class.text]="bool">Reading</h1>
+<!-- style binding -->
+<h1 [style.color]="bool?'blue':'green'">stylebinding</h1>
+<!-- event binding -->
+<button (click)="clickme()">click me</button>
+<!-- event filtering -->
+<!-- old method -->
+<!-- <input type="text" (keyup)="onkeyup($event)"> -->
+<!-- new method -->
+<input type="text" (keyup.enter)="onkeyup()">
+<!-- template variable -->
+<input type="text" (keyup.enter)="templatevariable(username.value)"  #username>
+
+<!-- two way data binding -->
+<input type="text" [(ngModel)]="userName" (keyup.enter)="twoway(e)">
+{{userName}}
+
+<!-- one way and two way data binding -->
+<input type="text" [value]="Textvalue" (keyup.enter)="oneway()">
+
+<input type="text" [(ngModel)]="Textvalue" (keyup.enter)="twowaybinding()">
