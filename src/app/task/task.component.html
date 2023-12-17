@@ -5,6 +5,6 @@
 <input type="text" [(ngModel)]="text4" placeholder="postlurl"><hr>
 <input type="checkbox" [(ngModel)]="addBackground">add background color
 
-<h1 [class.backcolor]="addBackground">{{text}}</h1>
+<h1 > <span [class.backcolor]="addBackground">{{text}}</span></h1>
 <p>{{text2}}</p>
 <a [href]="text4" target="_blank" [style.display]="text4 ? 'block':'none'">Moredetails</a>
