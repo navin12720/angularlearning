@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="text" placeholder="posttittle">
+<textarea name="textarea" id="textbox" cols="20" rows="5" [(ngModel)]="text2" placeholder="postcontent"></textarea>
+<input type="text" [(ngModel)]="text3" placeholder="postimage">
+<img [src]="text3" alt="image"><hr>
+<input type="text" [(ngModel)]="text4" placeholder="postlurl"><hr>
+<input type="checkbox" [(ngModel)]="addBackground">add background color
+
+<h1 [class.backcolor]="addBackground">{{text}}</h1>
+<p>{{text2}}</p>
+<a [href]="text4" target="_blank" [style.display]="text4 ? 'block':'none'">Moredetails</a>
