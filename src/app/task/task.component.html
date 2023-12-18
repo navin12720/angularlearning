@@ -8,3 +8,31 @@
 <h1 > <span [class.backcolor]="addBackground">{{text}}</span></h1>
 <p>{{text2}}</p>
 <a [href]="text4" target="_blank" [style.display]="text4 ? 'block':'none'">Moredetails</a>
+
+<br>
+<hr>
+<input type="text" [(ngModel)]="name" placeholder="name">
+<input type="email" [(ngModel)]="email" placeholder="email">
+<textarea [(ngModel)]="detail" cols="20" rows="5" placeholder="detail"></textarea>
+<button (click)="submit()">save data</button>
+<div *ngIf="array.length > 0;else nodata">
+  <table>
+    <tr>
+      <th>#</th>
+      <th>name</th>
+      <th>email</th>
+      <th>detail</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let x of array;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.email}}</td>
+      <td>{{x.detail}}</td>
+      <td><button (click)="delete(i)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<ng-template #nodata>
+  <h2>no data</h2>
+</ng-template>
