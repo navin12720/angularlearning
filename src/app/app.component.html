@@ -27,3 +27,16 @@
 <input type="text" [value]="Textvalue" (keyup.enter)="oneway()">
 
 <input type="text" [(ngModel)]="Textvalue" (keyup.enter)="twowaybinding()">
+
+<!-- ng switch -->
+<div>
+    <button (click)="onclick('step 1')">step 1</button>
+    <button (click)="onclick('step 2')">step 2</button>
+    <button (click)="onclick('step 3')">step 3</button>
+</div>
+<div [ngSwitch]="stepform">
+    <div *ngSwitchCase="'step 1'">step 1 form</div>
+    <div *ngSwitchCase="'step 2'">step 2 form</div>
+    <div *ngSwitchCase="'step 3'">step 3 form</div>
+    <div *ngSwitchDefault>Something else</div>
+</div>

@@ -55,4 +55,9 @@ export class AppComponent implements AfterViewInit {
   twowaybinding(){
     console.log(this.Textvalue);
   }
+  //ng switch
+  stepform:string="something else";
+  onclick(status){
+    this.stepform=status;
+  }
 }
