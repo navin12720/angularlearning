@@ -15,5 +15,22 @@ export class TaskComponent implements OnInit {
 
   ngOnInit() {
   }
+  array:Array<any>=[];
+  name:string;
+  email:string;
+  detail:string;
+  submit(){
+    this.array.push({
+      name:this.name,
+      email:this.email,
+      detail:this.detail
+    })
+    this.name="";
+    this.email="";
+    this.detail="";
+  }
+  delete(index){
+    this.array.splice(index,1);
+  }
 
 }
