@@ -40,3 +40,8 @@
     <div *ngSwitchCase="'step 3'">step 3 form</div>
     <div *ngSwitchDefault>Something else</div>
 </div>
+<!-- custom pipe -->
+<h1>{{obj.city | append}}</h1>
+
+<!-- custom pipe with arguments -->
+<p>{{dummuytext |summary:10}}</p>

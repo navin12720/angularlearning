@@ -60,4 +60,12 @@ export class AppComponent implements AfterViewInit {
   onclick(status){
     this.stepform=status;
   }
+  //custom pipe
+  obj={
+    name:"navin",
+    city:"chennai"
+  }
+
+  //custompipe with arguments
+  dummuytext:string="rexdtcfyvgbuhnj drfyguhjoik d6ftguyhijnomk dr6ftugyhij";
 }
